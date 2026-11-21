@@ -17,15 +17,14 @@ picture alone: a microwave, full of ice, proudly freezing.
 
 A second concept — SOCKHOLE, a portable black hole for lost socks — was
 designed, rendered and harsh-judged against the same five criteria
-in-session; COLDWAVE won on the job reading at a glance (the sock read as
-a striped stick, and the black disc did not look manufactured), and both
-concepts remain in `main.py` as the record of that comparison.
+in-session; COLDWAVE won on the job reading at a glance, and that
+comparison lives in the campaign report.
 
 ## How it works
 
 `main.py` (Python 3, standard library + Pillow where available) draws the
-whole studio shot as procedural vector art — brushed-steel gradients,
-a frost-rimmed door window, the ice cubes, the display and the single
+whole studio shot as procedural vector art — brushed-steel gradients, a
+frost-rimmed door window, the ice cubes, the display and the single
 accessory cube — on a seamless studio sweep, supersampled 2× and
 downscaled to 1024×1024.
 
@@ -35,13 +34,11 @@ both paths write byte-identical output. Run twice and the bytes are
 identical.
 
 ```sh
-python3 main.py          # renders the winning concept (COLDWAVE)
-python3 main.py A        # COLDWAVE — the winner
-python3 main.py B        # SOCKHOLE — the losing candidate, for comparison
+python3 main.py
 ```
 
 Output goes to `$MAKEFUN_OUTPUT_DIR` (default `./out`) as `entry.png`:
-1024×1024, 228,489 bytes — inside the 1,048,576-byte cap.
+1024×1024 — inside the 1,048,576-byte cap.
 
 ## Licence
 
